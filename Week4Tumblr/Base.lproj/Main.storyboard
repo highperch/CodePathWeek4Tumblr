@@ -136,14 +136,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="loading-3" id="1Ln-Sh-uE0">
-                                <rect key="frame" x="129.5" y="274.5" width="61" height="19"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="loading-2" id="3bX-sw-nFi">
-                                <rect key="frame" x="129.5" y="274.5" width="61" height="19"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="loading-1" id="OAB-hw-Ya4">
                                 <rect key="frame" x="129.5" y="274.5" width="61" height="19"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -152,6 +144,7 @@
                         <color key="backgroundColor" red="0.16862745100000001" green="0.22352941179999999" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="loadingIndicator" destination="OAB-hw-Ya4" id="pDG-jz-V4T"/>
                         <outlet property="searchFeed" destination="RPc-PT-9pg" id="dVp-e4-FtM"/>
                     </connections>
                 </viewController>
@@ -278,8 +271,6 @@
         <image name="home_spinner" width="146" height="146"/>
         <image name="link_icon" width="75" height="95"/>
         <image name="loading-1" width="61" height="19"/>
-        <image name="loading-2" width="61" height="19"/>
-        <image name="loading-3" width="61" height="19"/>
         <image name="nevermind" width="320" height="53"/>
         <image name="photo_icon" width="75" height="95"/>
         <image name="quote_icon" width="75" height="96"/>
