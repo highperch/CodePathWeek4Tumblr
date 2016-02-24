@@ -82,7 +82,7 @@ class TabBarViewController: UIViewController {
         viewControllers = [homeViewController, searchViewController, accountViewController, trendingViewController]
         
         //Set up button array
-        buttons = [homeButton, searchButton, composeButton, accountButton, trendingButton]
+        buttons = [homeButton, searchButton, accountButton, trendingButton]
         buttons[selectedIndex].selected = true
         didPressTab(buttons[selectedIndex])
         
