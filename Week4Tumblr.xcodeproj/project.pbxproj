@@ -13,6 +13,7 @@
 		1E56E1461C7CF22D006FA3E0 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E56E1451C7CF22D006FA3E0 /* ComposeViewController.swift */; };
 		1E56E1481C7CF23F006FA3E0 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E56E1471C7CF23F006FA3E0 /* AccountViewController.swift */; };
 		1E56E14A1C7CF249006FA3E0 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E56E1491C7CF249006FA3E0 /* TrendingViewController.swift */; };
+		1E75CEC31C7E133C0039337F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E75CEC21C7E133C0039337F /* Common.swift */; };
 		1E8A566D1C7C015B00595446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A566C1C7C015B00595446 /* AppDelegate.swift */; };
 		1E8A566F1C7C015B00595446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A566E1C7C015B00595446 /* ViewController.swift */; };
 		1E8A56721C7C015B00595446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8A56701C7C015B00595446 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		1E56E1451C7CF22D006FA3E0 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		1E56E1471C7CF23F006FA3E0 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		1E56E1491C7CF249006FA3E0 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		1E75CEC21C7E133C0039337F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		1E8A56691C7C015B00595446 /* Week4Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week4Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8A566C1C7C015B00595446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E8A566E1C7C015B00595446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				1E8A566C1C7C015B00595446 /* AppDelegate.swift */,
 				1E8A566E1C7C015B00595446 /* ViewController.swift */,
 				1E8A56701C7C015B00595446 /* Main.storyboard */,
+				1E75CEC21C7E133C0039337F /* Common.swift */,
 				1E56E14B1C7CF258006FA3E0 /* View Controllers */,
 				1E8A56731C7C015B00595446 /* Assets.xcassets */,
 				1E8A56751C7C015B00595446 /* LaunchScreen.storyboard */,
@@ -289,6 +292,7 @@
 				1E56E14A1C7CF249006FA3E0 /* TrendingViewController.swift in Sources */,
 				1E8A566F1C7C015B00595446 /* ViewController.swift in Sources */,
 				1E56E1481C7CF23F006FA3E0 /* AccountViewController.swift in Sources */,
+				1E75CEC31C7E133C0039337F /* Common.swift in Sources */,
 				1E56E1401C7CF0BE006FA3E0 /* TabBarViewController.swift in Sources */,
 				1E56E1461C7CF22D006FA3E0 /* ComposeViewController.swift in Sources */,
 				1E8A566D1C7C015B00595446 /* AppDelegate.swift in Sources */,

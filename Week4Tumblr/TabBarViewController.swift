@@ -21,6 +21,14 @@ class TabBarViewController: UIViewController {
     var accountViewController: UIViewController!
     var trendingViewController: UIViewController!
     
+    @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var composeButton: UIButton!
+    @IBOutlet weak var accountButton: UIButton!
+    @IBOutlet weak var trendingButton: UIButton!
+    
+    @IBOutlet weak var discoverBubble: UIImageView!
+    
     var viewControllers: [UIViewController]!
     
     var selectedIndex: Int = 0
@@ -43,11 +51,19 @@ class TabBarViewController: UIViewController {
         vc.view.frame = contentView.bounds
         contentView.addSubview(vc.view)
         vc.didMoveToParentViewController(self)
+        //Add the popup if the current VC is not Search
+        if selectedIndex == 1 {
+            discoverBubble.hidden = true
+        } else {
+            discoverBubble.hidden = false
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //Set up ViewControllers and the VC array
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
         searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
         composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController")
@@ -55,9 +71,25 @@ class TabBarViewController: UIViewController {
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
         viewControllers = [homeViewController, searchViewController, composeViewController, accountViewController, trendingViewController]
         
+        //Set up button array
+        buttons = [homeButton, searchButton, composeButton, accountButton, trendingButton]
         buttons[selectedIndex].selected = true
         didPressTab(buttons[selectedIndex])
-
+        
+        //Start animating the button
+        let translation = CGAffineTransformMakeTranslation(0, -10)
+        UIView.animateWithDuration(2.0, delay: 0, options: [.Repeat, .Autoreverse], animations: { () -> Void in
+            self.discoverBubble.transform = translation
+            }) { (Bool) -> Void in
+                
+            }
+        
+        /*
+        UIView.animateWithDuration(1.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.4, options: [.Repeat, .Autoreverse], animations: { () -> Void in
+            self.discoverBubble.transform = translation
+            }) { (Bool) -> Void in
+        }
+        */
         // Do any additional setup after loading the view.
     }
 
