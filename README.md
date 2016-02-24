@@ -3,7 +3,7 @@ CodePath iOS for Designers Week 4 Assignment
 
 This is a walkthrough of the iOS Tumblr App for Week 4's assignment.
 
-Time spent: 2.75 hours spent in total
+Time spent: 3.0 hours spent in total
 
  * [x] Tapping on Home, Search, Account, or Trending should show the respective screen and highlight the tab bar button.
  * [x] Compose button should modally present the compose screen.
