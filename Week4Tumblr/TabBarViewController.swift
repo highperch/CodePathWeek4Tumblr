@@ -59,6 +59,16 @@ class TabBarViewController: UIViewController {
         }
     }
     
+    @IBAction func didPressCompose(sender: AnyObject) {
+        performSegueWithIdentifier("composeSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        var destinationViewController = segue.destinationViewController as! ComposeViewController
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -69,7 +79,7 @@ class TabBarViewController: UIViewController {
         composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController")
         accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController")
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
-        viewControllers = [homeViewController, searchViewController, composeViewController, accountViewController, trendingViewController]
+        viewControllers = [homeViewController, searchViewController, accountViewController, trendingViewController]
         
         //Set up button array
         buttons = [homeButton, searchButton, composeButton, accountButton, trendingButton]
