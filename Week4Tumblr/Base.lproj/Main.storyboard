@@ -116,9 +116,21 @@
                                 <rect key="frame" x="0.0" y="274" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rTQ-N7-ca5" userLabel="Log In">
+                                <rect key="frame" x="254" y="26" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didPressLogin:" destination="WKM-Jv-jsQ" eventType="touchUpInside" id="Pbd-In-ZYu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="dX3-T0-deX" kind="modal" identifier="LoginSegue" id="fBE-0R-NIn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NsF-sB-x4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,7 +167,7 @@
         <!--Compose View Controller-->
         <scene sceneID="3Jg-wt-IJZ">
             <objects>
-                <viewController storyboardIdentifier="ComposeViewController" id="TE0-TP-RkQ" customClass="ComposeViewController" customModule="Week4Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ComposeViewController" modalPresentationStyle="overCurrentContext" id="TE0-TP-RkQ" customClass="ComposeViewController" customModule="Week4Tumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K5m-x3-Q1s">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,11 +212,43 @@
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="K5m-x3-Q1s" id="DCh-9S-Hou"/>
+                        <outlet property="chatButton" destination="nFr-uy-XwJ" id="ZWN-1t-nvB"/>
+                        <outlet property="linkButton" destination="Y4k-d4-dYw" id="1lX-tA-MYX"/>
+                        <outlet property="photoButton" destination="PeE-bg-Rhj" id="XVw-OQ-OIy"/>
+                        <outlet property="quoteButton" destination="XtD-EJ-dGl" id="hJj-X1-Qdf"/>
+                        <outlet property="textButton" destination="X5h-b1-ljw" id="cBj-6Y-Ln0"/>
+                        <outlet property="videoButton" destination="O7O-Wn-S7z" id="odX-su-xpm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0T-hh-WNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="162" y="1015"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="OAX-35-qUr">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="dX3-T0-deX" customClass="LoginViewController" customModule="Week4Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EHY-jJ-5bv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="URx-lK-7Mh">
+                                <rect key="frame" x="10" y="180" width="300" height="132"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AJy-pe-8r9" userLabel="Cancel">
+                                <rect key="frame" x="10" y="269" width="150" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didPressCancel:" destination="dX3-T0-deX" eventType="touchUpInside" id="Czw-cg-7yj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rww-gx-hmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="1709"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="qtH-dz-ljY">
@@ -218,9 +262,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VDo-vz-y2S">
+                                <rect key="frame" x="168" y="354" width="104" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didPressLogin:" destination="KNX-I7-aKS" eventType="touchUpInside" id="jvp-0S-kuR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="dX3-T0-deX" kind="modal" identifier="LoginSegue2" id="Qw8-Eh-cZS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xjn-5I-3bQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -271,6 +325,7 @@
         <image name="home_spinner" width="146" height="146"/>
         <image name="link_icon" width="75" height="95"/>
         <image name="loading-1" width="61" height="19"/>
+        <image name="login_form" width="300" height="132"/>
         <image name="nevermind" width="320" height="53"/>
         <image name="photo_icon" width="75" height="95"/>
         <image name="quote_icon" width="75" height="96"/>
@@ -283,4 +338,7 @@
         <image name="trending_selected_icon" width="35" height="35"/>
         <image name="video_icon" width="75" height="95"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fBE-0R-NIn"/>
+    </inferredMetricsTieBreakers>
 </document>

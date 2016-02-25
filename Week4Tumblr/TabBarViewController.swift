@@ -30,7 +30,7 @@ class TabBarViewController: UIViewController {
     @IBOutlet weak var discoverBubble: UIImageView!
     
     var viewControllers: [UIViewController]!
-    
+    var composeTransition: FadeTransition!
     var selectedIndex: Int = 0
     
     @IBAction func didPressTab(sender: UIButton) {
@@ -65,7 +65,17 @@ class TabBarViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         var destinationViewController = segue.destinationViewController as! ComposeViewController
-        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
+        // Set the modal presentation style of your destinationViewController to be custom.
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        // Create a new instance of your fadeTransition.
+        composeTransition = FadeTransition()
+        
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        destinationViewController.transitioningDelegate = composeTransition
+        
+        // Adjust the transition duration. (seconds)
+        composeTransition.duration = 1.0
         
     }
     

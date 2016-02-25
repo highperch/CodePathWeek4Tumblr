@@ -9,6 +9,30 @@
 import UIKit
 
 class AccountViewController: UIViewController {
+    
+    var loginTransition: FadeTransition!
+    
+    @IBAction func didPressLogin(sender: UIButton) {
+        self.performSegueWithIdentifier("LoginSegue2", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+        var destinationViewController = segue.destinationViewController
+        
+        // Set the modal presentation style of your destinationViewController to be custom.
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        // Create a new instance of your fadeTransition.
+        loginTransition = FadeTransition()
+        
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        destinationViewController.transitioningDelegate = loginTransition
+        
+        // Adjust the transition duration. (seconds)
+        loginTransition.duration = 0.7
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
