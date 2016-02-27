@@ -38,7 +38,7 @@ class ComposeViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        textButton.center.y += view.frame.height
+        textButton.center.y += 568
         photoButton.center.y += 568
         quoteButton.center.y += 568
         linkButton.center.y += 568
@@ -47,6 +47,29 @@ class ComposeViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        photoButton.center = photoButtonCenter
+        
+        UIView.animateWithDuration(0.1) { () -> Void in
+            self.chatButton.center = self.chatButtonCenter
+        }
+        
+        UIView.animateWithDuration(0.2) { () -> Void in
+            self.quoteButton.center = self.quoteButtonCenter
+        }
+        
+        UIView.animateWithDuration(0.3) { () -> Void in
+            self.textButton.center = self.textButtonCenter
+        }
+        
+        UIView.animateWithDuration(0.4) { () -> Void in
+            self.linkButton.center = self.linkButtonCenter
+        }
+        
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.videoButton.center = self.videoButtonCenter
+        }
+        
+        /*
         UIView.animateWithDuration(0.5) { () -> Void in
             self.textButton.center = self.textButtonCenter
             self.photoButton.center = self.photoButtonCenter
@@ -55,6 +78,7 @@ class ComposeViewController: UIViewController {
             self.chatButton.center = self.chatButtonCenter
             self.videoButton.center = self.videoButtonCenter
         }
+        */
     }
     
     override func viewDidLoad() {

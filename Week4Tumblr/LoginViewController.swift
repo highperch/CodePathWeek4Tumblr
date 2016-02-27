@@ -10,13 +10,20 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
     @IBAction func didPressCancel(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.emailField.becomeFirstResponder()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
